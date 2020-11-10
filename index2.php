@@ -61,6 +61,7 @@
 			</svg>
 		</div>
 -->
+<!--
 
 		<div class="stack three">
 			<div class="gradient three"></div>
@@ -100,7 +101,7 @@
 				</g>
 			</svg>
 		</div>
-
+-->
 		<div class="stack two">
 			<div class="gradient two"></div>
 			<svg class="svg two" viewbox="0 0 1440 900">
@@ -161,7 +162,7 @@
 				</g>
 			</svg>
 		</div>
-
+<!--
 		<div class="stack one">
 			<div class="gradient one"></div>
 			<svg class="svg one" viewbox="0 0 1440 900">
@@ -210,6 +211,7 @@
 				</g>
 			</svg>
 		</div>
+-->
 
 	</div>
 	<script>
