@@ -1,0 +1,15 @@
+# System files
+# ------------
+
+Icon
+.DS_Store
+
+# sublime
+*.sublime-project
+*.sublime-workspace
+
+#notas
+notas.txt
+
+#  node modules
+/node_modules/*
