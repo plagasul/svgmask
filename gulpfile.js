@@ -10,39 +10,39 @@ const babel = require("gulp-babel");
 
 function build_CSS() {
 
-  var vendor = src('assets/css/vendor/*.css')
-    .pipe(postcss([cssnano]));
+  var vendor = src('css/vendor/*.css')
+    //.pipe(postcss([cssnano]));
 
-  var app = src('assets/css/*.sass')
+  var app = src('css/*.sass')
     .pipe(sass())
     .on("error", sass.logError)
-    .pipe(postcss([autoprefixer, cssnano]));
+    //.pipe(postcss([autoprefixer/*, cssnano*/]));
 
   return merge(vendor, app)
     .pipe(concat('build.css'))
-    .pipe(dest('assets/css/build/'))
+    .pipe(dest('css/build/'))
 
 }
 
 function build_JS() {
 
-  var vendor = src('assets/js/vendor/*.js')
+  var vendor = src('js/vendor/*.js')
     //.pipe(gp_uglify());
 
-  var app = src('assets/js/*.js')
+  var app = src('js/*.js')
     //.pipe(gp_uglify());
 
   return merge(vendor, app)
     .pipe(babel())
     .pipe(concat('build.js'))
-    .pipe(dest('assets/js/build/'))
+    .pipe(dest('js/build/'))
 
 }
 
 function watch_ALL(done) {
 
-  watch('assets/css/*.sass', build_CSS);
-  watch('assets/js/*.js', build_JS);
+  watch('css/*.sass', build_CSS);
+  watch('js/*.js', build_JS);
   done();
 
 }
