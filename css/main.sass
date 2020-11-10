@@ -1,0 +1,64 @@
+html
+  padding: 0
+  margin: 0
+
+body
+  padding: 0
+  margin: 0
+  width: 100vw
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background: darkgrey
+  overflow: hidden
+
+.container
+  width: 1440px
+  height: 900px
+  position: relative
+  overflow: hidden
+  filter: saturate(120%) contrast(150%)
+
+.stack
+  mix-blend-mode: lighten
+
+svg
+  position: absolute
+  top: 0
+  left: 0
+
+  // Fixed w and h as container, to make it easier to demo, independently of resolution
+  width: 1440px
+  height: 900px
+  mix-blend-mode: darken
+
+.gradient
+  width: 200%
+  height: 200%
+  position: absolute
+  top: -50%
+  left: -50%
+
+  &.one
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 36%, rgba(26, 150, 255, 1) 55%, rgba(255, 0, 215, 1) 62%, rgba(0, 0, 0, 1) 85%)
+    animation: rotateW 3000ms infinite linear
+
+  &.two
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 36%, rgba(255, 141, 26, 1) 55%, rgba(116, 195, 45, 1) 62%, rgba(0, 0, 0, 1) 85%)
+    animation: rotateCW 3000ms infinite linear
+
+// Animations
+@keyframes rotateW
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+@keyframes rotateCW
+  0%
+    transform: rotate(360deg)
+
+  100%
+    transform: rotate(0deg)
